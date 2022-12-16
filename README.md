@@ -1,21 +1,41 @@
-# Socket 14
 
-Project: Event Emitters
-Author: Zoe Gonzalez
+# LAB - Class 13
 
+## Project: Event Driven Programming Lab 14
+With a team, an application that is well executed, planned, and presented must be created that showcases event driven architecture
+
+<<<<<<< HEAD
 This application utlizes the usage of having sockets rather than eventbased Emitters, it is very useful and modularizes the program. It is between
+=======
 
-Production Deployment: https://api.render.com/deploy/srv-cebuj1arrk0506th8630?key=vAJlBvK2Nr8
+### Author: Jacob Dang
+>>>>>>> 8072b73c4d5692c08d2d6d6423100e511e801a64
 
+### Problem Domain
+There must be a hub that connects and evaluates all events. Events connected to the hub must be seen within clients. The project must also operate over a network
+
+<<<<<<< HEAD
 Setup
+=======
+### Links & Resources
+{GitHub Actions} {URL}
+{Deployed Database} {}
 
-env requirements
-see .env.sample
+see '.env.sample'
+>>>>>>> 8072b73c4d5692c08d2d6d6423100e511e801a64
 
-PORT: 3001
+### Features/Routes:
+- Client Handler: Creates and passes over 'tickets' that request for help with errors
+- Helper Handler: Responds to 'tickets' and passes the tickets as 'received and fixed'
 
-DATABASE_URL=postgres://localhost:5432/Auth-Final
+#### Tests
+- How do you run tests?
+    - node index.js
 
+## UML
+![UML](./images/socket-14.PNG)
+
+<<<<<<< HEAD
 How to initalize application
 'npm start'
 
@@ -52,3 +72,5 @@ Features / Routes
 ![WRRC](./WRRC-2.PNG)
 
 ![WRRC](./workflow.PNG)
+=======
+>>>>>>> 8072b73c4d5692c08d2d6d6423100e511e801a64
