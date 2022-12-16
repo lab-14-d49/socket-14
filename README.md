@@ -24,4 +24,4 @@ see '.env.sample'
     - node index.js
 
 ## UML
-![UML](./images/socket-14.png)
+![UML](./images/socket-14.PNG)
