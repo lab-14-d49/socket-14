@@ -17,7 +17,6 @@ const resolveTicket = (socket) => (payload) => {
     {
         message: `Ticket Error ${payload.description} resolved`
     }
-    console.log('SUPER DISTINCT RESOLVED TICKET >:(')
     socket.emit('RESOLVE_TICKET', resolvedPayload);
 }
 

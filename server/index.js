@@ -10,7 +10,7 @@ const { Server } = require('socket.io');
 const PORT = process.env.PORT || 3002;
 const server = new Server(PORT);
 
-const Queue = require('./lib/queue');
+const Queue = require('./lib/Queue');
 const ticketQueue = new Queue;
 
 console.log('listening on PORT:', PORT);
@@ -42,9 +42,9 @@ server.on('connection', (socket) => {
 
   socket.on('REQUEST_TICKET', () => {
     let currentTicket = ticketQueue.read();
-    let payload; 
-    if (!currentTicket){
-      payload = {message: 'No tickets'};
+    let payload;
+    if (!currentTicket) {
+      payload = { message: 'No tickets' };
     } else {
       payload = ticketQueue.dequeue();
     }
@@ -52,7 +52,6 @@ server.on('connection', (socket) => {
   });
 
   socket.on('RESOLVE_TICKET', (payload) => {
-    console.log('RESOLVE PL0X :(')
     socket.to('tech-support').emit('RESOLVED', payload);
   });
 

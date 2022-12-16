@@ -3,11 +3,9 @@
 Project: Event Emitters
 Author: Zoe Gonzalez
 
-
-This application utlizes the usage of having sockets rather than eventbased Emitters, it is very useful and modularizes the program. It is between 
+This application utlizes the usage of having sockets rather than eventbased Emitters, it is very useful and modularizes the program. It is between
 
 Production Deployment: https://api.render.com/deploy/srv-cebuj1arrk0506th8630?key=vAJlBvK2Nr8
-
 
 Setup
 
@@ -47,7 +45,7 @@ Features / Routes
 
 /users: lists users
 
-/* : If the page is not available then an error flag is thrown.
+/\* : If the page is not available then an error flag is thrown.
 
 ## Workflow
 
