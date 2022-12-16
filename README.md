@@ -27,7 +27,7 @@ This application requires 4 terminals. Use the following commands, one command p
   
 `node server/index.js` - This will open socket.io to listen for clients  
 `node help/index.js` - This will prompt the user to look for new help tickets (if no tickets created it will return no tickets)  
-`node client/index.js` - This will allow the client to view messages that come in from tech support 
+`node client/index.js` - This will allow the client to view messages that come in from tech support  
 `node client/newTicket.js` - This will allow the client to create new tickets  
   
 - Client Handler: Creates and passes over 'tickets' that request for help with errors
