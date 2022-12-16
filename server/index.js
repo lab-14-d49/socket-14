@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const { Server } = require('socket.io');
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 const server = new Server(PORT);
 
 const Queue = require('./lib/Queue');
@@ -16,7 +16,7 @@ const ticketQueue = new Queue;
 console.log('listening on PORT:', PORT);
 
 server.on('connection', (socket) => {
-
+  console.log(socket.id);
   socket.onAny((event, payload) => {
     const time = new Date();
     console.log('EVENT:', { event, time, payload });
@@ -37,7 +37,7 @@ server.on('connection', (socket) => {
     console.log('TICKET CREATED', payload);
 
     //Responds when ticket is found
-    socket.emit('NEW_TICKET', 'Ticket Received');
+    socket.to('tech-support').emit('NEW_TICKET', 'Ticket Received');
   });
 
   socket.on('REQUEST_TICKET', () => {
