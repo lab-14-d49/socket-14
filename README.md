@@ -5,7 +5,7 @@
 With a team, an application that is well executed, planned, and presented must be created that showcases event driven architecture
 
 
-### Author: Jacob Dang
+### Author: Jacob Dang, Zoe Gonzalez, Lewis Benson
 
 ### Problem Domain
 There must be a hub that connects and evaluates all events. Events connected to the hub must be seen within clients. The project must also operate over a network
