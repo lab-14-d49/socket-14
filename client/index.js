@@ -7,9 +7,8 @@ const { createTicket } = require('./clientHandler');
 socket.emit('JOIN', 'tech-support');
 
 socket.on('RESOLVED', (payload) => {
-console.log('Thanks for fixing', `${payload.message}`);
+    console.log('Thanks for fixing', `${payload.message}`);
 });
 
-setInterval(() => {
-    createTicket(socket)
-}, 3000);
+
+

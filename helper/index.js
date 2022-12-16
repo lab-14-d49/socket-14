@@ -7,8 +7,13 @@ const { gotTicket, incomingTicket } = require('./helperHandler');
 
 socket.emit('JOIN', 'tech-support');
 socket.on('INCOMING_TICKET', (payload) => {
-    incomingTicket(socket)(payload)});
+    incomingTicket(socket)(payload);
+});
 
-setInterval(() => {
+socket.on('NEW_TICKET', () => {
     gotTicket(socket);
-}, 3000);
+});
+
+
+gotTicket(socket);
+
