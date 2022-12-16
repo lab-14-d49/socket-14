@@ -1,12 +1,20 @@
 'use strict';
 
-const { io } = require('socket.io-client');
-const socket = io('http://localhost:3001/');
+const { Chance } = require('chance');
+const chance = new Chance();
 
-const createTicket = (socket) => (payload) => {
-  console.log('FAKE TICKET CREATED FAKE')
-  socket.emit('CREATE_TICKET', createTicket);
+const createTicket = (socket) => {
+  console.log('NEW TICKET CREATED');
+  const payload = {
+    name: 'Jacob',
+    //Add Inquire Feature after MVP
+    ticket: chance.guid(),
+    ticketId: chance.guid(),
+    description: 'Description of Issue',
+    helper: 'tech-support',
+  }
+
+  socket.emit('NEW_TICKET', payload);
 };
 
-
-modules.export = createTicket;
+module.exports = {createTicket};
