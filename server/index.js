@@ -44,7 +44,7 @@ server.on('connection', (socket) => {
     let currentTicket = ticketQueue.read();
     let payload;
     if (!currentTicket) {
-      payload = { message: 'No tickets' };
+      payload = 'No tickets';
     } else {
       payload = ticketQueue.dequeue();
     }
@@ -53,6 +53,12 @@ server.on('connection', (socket) => {
 
   socket.on('RESOLVE_TICKET', (payload) => {
     socket.to('tech-support').emit('RESOLVED', payload);
+    const check = ticketQueue.read();
+
+    if (check?.name) {
+      socket.emit('CHECK_AGAIN')
+
+    }
   });
 
 });
