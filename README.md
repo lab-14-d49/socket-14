@@ -1,6 +1,6 @@
 <!-- @format -->
 
-# LAB - Class 13
+# LAB - Class 14
 
 ## Project: Event Driven Programming Lab 14
 
